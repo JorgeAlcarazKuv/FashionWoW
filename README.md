@@ -23,9 +23,35 @@ Al final de la documentación, se dejará una lista de IDs, tanto ya usados (ya 
 
 ## Imágenes
 
-Index. La página de recepción. Una lista con los últimos post añadidos. Es posible hacer click en el título del post para acceder al detalle del mismo. También podemos seleccionar el autor para acceder a una lista de todos los post subidos por el autor.
+**Index**. La página de recepción. Una lista con los últimos post añadidos. Es posible hacer click en el título del post para acceder al detalle del mismo. También podemos seleccionar el autor para acceder a una lista de todos los post subidos por el autor.
 <img src="https://i.imgur.com/BjrARAH.png" alt="imagen1" width="800" height="400">
 
 
-Registro. Una básica interfaz de registro. Existe cierto control de validación para evitar nombres repetidos, y contraseñas que no coincidan en la repetición.
+**Registro**. Una básica interfaz de registro. Existe cierto control de validación para evitar nombres repetidos, y contraseñas que no coincidan en la repetición.
 <img src="https://i.imgur.com/tIpe73z.png" alt="imagen1" width="800" height="400">
+
+
+**LogIn**. Vista para entrar con la cuenta de usuario ya creada.
+<img src="https://i.imgur.com/ZLWzAJj.png" alt="imagen1" width="800" height="400">
+
+
+**Subir nuevo post**. Pantalla que permite la subida de un nuevo post. Sólo es posible estando logeado. 
+Se nos permitirá añadir cada pieza de armadura aportando la ID de la misma. 
+<img src="https://i.imgur.com/CRtTH7i.png" alt="imagen1" width="800" height="400">
+
+Al desenfocar la casilla, se accederá a la API de WoW asíncronamente para traerse la información del objeto, a la vez que la guarda en base de datos.
+<img src="https://i.imgur.com/eSB0KhM.jpg" alt="imagen1" width="800" height="400">
+
+
+**Detalle de post**. Visualización de un post concreto. Todos los datos mostrados son cargados de la base de datos, poblada con los datos necesarios en el momento de la subida. El nombre del objeto es cargado en un tooltip al pasar el ratón.
+<img src="https://i.imgur.com/dQ8QBIz.png" alt="imagen1" width="800" height="400">
+
+
+**Publicaciones de un usuario**. Lista de las publicaciones de un usuario seleccionado.
+<img src="https://i.imgur.com/ViKR8nc.png" alt="imagen1" width="800" height="400">
+
+
+**Administración**. Permite la administración de usuarios. No es la funcionalidad principal de este proyecto. Sólo es accesible por usuarios administradores. Sólo un administrador puede cambiar el nivel de acceso de otros usuarios, existiendo 3 niveles: admin, moderador, usuario.
+<img src="https://i.imgur.com/OHErrbb.png" alt="imagen1" width="800" height="400">
+
+
