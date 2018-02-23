@@ -43,7 +43,7 @@ Al desenfocar la casilla, se accederá a la API de WoW asíncronamente para trae
 <img src="https://i.imgur.com/eSB0KhM.jpg" alt="imagen1" width="800" height="400">
 
 
-**Detalle de post**. Visualización de un post concreto. Todos los datos mostrados son cargados de la base de datos, poblada con los datos necesarios en el momento de la subida. El nombre del objeto es cargado en un tooltip al pasar el ratón.
+**Detalle de post**. Visualización de un post concreto. Todos los datos mostrados son cargados de la base de datos, poblada con los datos necesarios en el momento de la subida. El nombre del objeto es cargado en un tooltip al pasar el ratón.  
 <img src="https://i.imgur.com/dQ8QBIz.png" alt="imagen1" width="800" height="400">
 
 
