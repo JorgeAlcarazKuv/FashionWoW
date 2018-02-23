@@ -4,6 +4,7 @@ World of Warcraft Transmogrification Website. Upload your favourites outfits.
 ## Índice
 - [Introducción](#introduccion)
 - [Imágenes](#imagenes)
+- [IDs](#ids)
 
 ## Introducción
 
@@ -55,3 +56,12 @@ Al desenfocar la casilla, se accederá a la API de WoW asíncronamente para trae
 <img src="https://i.imgur.com/OHErrbb.png" alt="imagen1" width="800" height="400">
 
 
+
+##IDs
+Sin usar:
+-- 138378
+-- 138376
+-- 138380
+-- 138377
+-- 138379
+-- 138375
