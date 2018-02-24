@@ -5,6 +5,7 @@ World of Warcraft Transmogrification Website. Upload your favourites outfits.
 - [Introducción](#introducción)
 - [Imágenes](#imágenes)
 - [IDs](#ids)
+- [ModeloER](#modeloer)
 
 ## Introducción
 
@@ -55,6 +56,9 @@ Al desenfocar la casilla, se accederá a la API de WoW asíncronamente para trae
 **Administración**. Permite la administración de usuarios. No es la funcionalidad principal de este proyecto. Sólo es accesible por usuarios administradores. Sólo un administrador puede cambiar el nivel de acceso de otros usuarios, existiendo 3 niveles: admin, moderador, usuario.
 <img src="https://i.imgur.com/OHErrbb.png" alt="imagen1" width="800" height="400">
 
+## ModeloER
+
+<img src="https://i.imgur.com/ErriIgB.png" alt="imagen1" width="800" height="400">
 
 
 ## IDs
@@ -65,3 +69,4 @@ IDs sin usar (Se añadirán a la base de datos al intentar introducirlas en un p
 - 138377
 - 138379
 - 138375
+
