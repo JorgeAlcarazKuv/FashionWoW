@@ -70,3 +70,4 @@ IDs sin usar (Se añadirán a la base de datos al intentar introducirlas en un p
 - 138379
 - 138375
 
+Las ID pueden sacarse de [WoWHead](www.wowhead.com), buscando un objeto en el buscador, y usando la ID que aparece en la url.
