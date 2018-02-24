@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 24-02-2018 a las 00:46:29
+-- Tiempo de generación: 24-02-2018 a las 01:09:09
 -- Versión del servidor: 5.6.35
 -- Versión de PHP: 7.1.8
 
@@ -31,22 +31,9 @@ CREATE TABLE `imagenes` (
 --
 
 INSERT INTO `imagenes` (`id_imagen`, `url`, `id_usuario`) VALUES
-(1, 'https://i.ytimg.com/vi/qTAcGLVEXOs/maxresdefault.jpg', 0),
-(2, 'http://wow.zamimg.com/uploads/screenshots/normal/403372.jpg', 0),
-(3, 'http://i.imgur.com/mO3sPgm.jpg', 0),
-(4, 'http://i.imgur.com/7PqD5.jpg', 0),
-(5, 'https://i.imgur.com/sypTTaP.jpg', 0),
-(6, 'https://i.imgur.com/QQVPBka.jpg', 0),
-(7, 'https://i.imgur.com/UB6fSwf.jpg', 0),
-(8, 'https://i.imgur.com/S0jjU9E.jpg', 0),
-(9, 'https://i.imgur.com/TqxkvUV.jpg', 0),
-(10, 'https://i.imgur.com/0ADJPke.jpg', 102),
 (11, 'https://i.imgur.com/4WGFKht.jpg', 102),
-(12, 'https://i.imgur.com/1XhjXAs.jpg', 185),
-(13, 'https://i.imgur.com/jQgCzaH.jpg', 102),
 (14, 'https://i.imgur.com/7X9cjX4.jpg', 191),
-(15, 'https://i.imgur.com/FskyCKe.jpg', 191),
-(16, '', 102);
+(15, 'https://i.imgur.com/FskyCKe.jpg', 191);
 
 -- --------------------------------------------------------
 
@@ -169,7 +156,8 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `password`, `nivel`) VAL
 -- Indices de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  ADD PRIMARY KEY (`id_imagen`);
+  ADD PRIMARY KEY (`id_imagen`),
+  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `items`
@@ -192,7 +180,9 @@ ALTER TABLE `posts`
   ADD KEY `fk-cinturon` (`id_item_cinturon`),
   ADD KEY `fk-piernas` (`id_item_piernas`),
   ADD KEY `fk-pies` (`id_item_pies`),
-  ADD KEY `fk-capa` (`id_item_capa`);
+  ADD KEY `fk-capa` (`id_item_capa`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_imagen_principal` (`id_imagen_principal`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -225,6 +215,12 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- Filtros para la tabla `imagenes`
+--
+ALTER TABLE `imagenes`
+  ADD CONSTRAINT `imagenes_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `posts`
 --
 ALTER TABLE `posts`
@@ -239,4 +235,6 @@ ALTER TABLE `posts`
   ADD CONSTRAINT `fk-pecho` FOREIGN KEY (`id_item_pecho`) REFERENCES `items` (`id_item`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `fk-piernas` FOREIGN KEY (`id_item_piernas`) REFERENCES `items` (`id_item`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `fk-pies` FOREIGN KEY (`id_item_pies`) REFERENCES `items` (`id_item`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk-tabardo` FOREIGN KEY (`id_item_camisa`) REFERENCES `items` (`id_item`) ON DELETE SET NULL ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk-tabardo` FOREIGN KEY (`id_item_camisa`) REFERENCES `items` (`id_item`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `posts_ibfk_2` FOREIGN KEY (`id_imagen_principal`) REFERENCES `imagenes` (`id_imagen`) ON DELETE CASCADE ON UPDATE CASCADE;
